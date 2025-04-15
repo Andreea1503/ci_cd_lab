@@ -22,11 +22,10 @@ jobs:
 
       # TODO 01 - Add a step to run tests
       - name: Run tests
-        run: go test ../..
+        run: go test ./...
 
   compile:
     needs: test
-    if: success
 
     runs-on: ubuntu-latest
     steps:
