@@ -20,12 +20,21 @@ jobs:
       - name: Install dependencies
         run: go mod download
 
+<<<<<<< HEAD
       # TODO 01 - Add a step to run tests
       - name: Run tests
         run: go test ./...
 
   compile:
     needs: test
+=======
+      - name: Run tests
+        run: go test ./...
+  
+  compile:
+    needs: test
+    if: success()
+>>>>>>> 027a9252fc022d095d876be36889d3653e141052
 
     runs-on: ubuntu-latest
     steps:
