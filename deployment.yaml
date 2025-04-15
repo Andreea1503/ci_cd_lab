@@ -19,3 +19,4 @@ spec:
           image: ghcr.io/Andreea1503/ci_cd_lab:latest
           ports:
             - containerPort: 8080
+
